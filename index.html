@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CanvasWire</title>
+		<style>
+			html, body {
+				padding: 0;
+				margin: 0;
+			}
+
+			canvas {
+				display: block;
+				margin: auto auto;
+			}
+		</style>
+		
+		<script type="text/javascript" src="js/lib/underscore.js"></script>
+		<script type="text/javascript" src="js/lib/ring.js"></script>
+		
+		<script type="text/javascript" src="js/managers/gamemanager.js"></script>
+		<script type="text/javascript" src="js/managers/statemanager.js"></script>
+		<script type="text/javascript" src="js/managers/eventmanager.js"></script>
+		
+		<script type="text/javascript" src="js/entity.js"></script>
+		<script type="text/javascript" src="js/state.js"></script>
+		<script type="text/javascript" src="js/point.js"></script>
+		<script type="text/javascript" src="js/renderer.js"></script>
+		<script type="text/javascript" src="js/timer.js"></script>
+		<script type="text/javascript" src="js/utils.js"></script>
+		
+		<script type="text/javascript" src="js/states/board.js"></script>
+		
+		<script type="text/javascript" src="js/entities/grid.js"></script>
+		<script type="text/javascript" src="js/entities/gridentity.js"></script>
+		<script type="text/javascript" src="js/entities/gate.js"></script>
+		<script type="text/javascript" src="js/entities/input.js"></script>
+		<script type="text/javascript" src="js/entities/output.js"></script>
+		<script type="text/javascript" src="js/entities/wire.js"></script>
+		<script type="text/javascript" src="js/entities/button.js"></script>
+		<script type="text/javascript" src="js/entities/eightsegment.js"></script>
+		
+		<script type="text/javascript" src="js/entities/gates/and.js"></script>
+		<script type="text/javascript" src="js/entities/gates/or.js"></script>
+		
+		<script type="text/javascript">
+			var gamemanager;
+			
+			function ready()
+			{
+				gamemanager = new GameManager({
+					startState: 'Board',
+					autoStart: true
+				});
+			}
+		</script>
+	</head>
+	<body onload="ready();" oncontextmenu="return false;"></body>
+</html>
